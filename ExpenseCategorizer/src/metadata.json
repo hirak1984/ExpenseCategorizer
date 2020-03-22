@@ -1,0 +1,361 @@
+{
+  "categories": [
+    {
+      "name": "Everyday",
+      "subCategories": [
+        {
+          
+            "name": "Groceries",
+            "keywordContainsIgnoreCase": ["cobs","rabba","UBER EATS","NOFRILLS","IQBAL","LABBAIK"]
+
+        },
+        {
+          
+            "name": "Restaurants",
+            "keywordContainsIgnoreCase": ["chaska","drux","PITA LITE","grabb","BAR B Q TONITE","CHALET","KABOB","SKIPTHEDISHES"]
+
+        },
+        {
+          
+            "name": "Personal supplies",
+            "keywordContainsIgnoreCase": ["BEAUTY"]
+
+        },
+        {
+          
+            "name": "Clothes",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Laundry/dry cleaning",
+            "keywordContainsIgnoreCase": ["COINAMATIC"]
+
+        },
+        {
+          
+            "name": "Personal Care",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Subscriptions",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Other",
+            "keywordContainsIgnoreCase": ["PREMIUM SWEETS"]
+
+        },
+        {
+          
+            "name": "Entertainment",
+            "keywordContainsIgnoreCase": []
+
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "subCategories": [
+        {
+          
+            "name": "Payment",
+            "keywordContainsIgnoreCase": ["PAYMENT"]
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "subCategories": [
+        {
+          
+            "name": "Rent/mortgage",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "taxes",
+            "keywordContainsIgnoreCase": ["INTUIT"]
+
+        },
+        {
+          
+            "name": "Furnishings",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Lawn/garden",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Supplies",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Maintenance",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Improvements",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Moving",
+            "keywordContainsIgnoreCase": []
+
+        }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "subCategories": [
+        {
+          
+            "name": "Car",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Health",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Home",
+            "keywordContainsIgnoreCase": ["square"]
+
+        },
+        {
+          
+            "name": "Life",
+            "keywordContainsIgnoreCase": []
+
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "subCategories": [
+        {
+          
+            "name": "Domains & hosting",
+            "keywordContainsIgnoreCase": ["AWS"]
+
+        },
+        {
+          
+            "name": "Online services",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Hardware",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Software",
+            "keywordContainsIgnoreCase": ["BITWARDEN"]
+
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "subCategories": [
+        {
+          
+            "name": "Doctors/dental/vision",
+            "keywordContainsIgnoreCase": ["JUNCTIONWEST"]
+
+        },
+        {
+          
+            "name": "Specialty care",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Pharmacy",
+            "keywordContainsIgnoreCase": ["PHARMACY"]
+
+        },
+        {
+          
+            "name": "Emergency",
+            "keywordContainsIgnoreCase": ["AMBULANCE"]
+
+        }
+      ]
+    },
+    {
+      "name": "Children",
+      "subCategories": [
+        {
+          
+            "name": "Other",
+            "keywordContainsIgnoreCase": ["STAPLES"]
+
+        },
+        {
+          
+            "name": "Activities",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Allowance",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Medical",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Childcare",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Clothing",
+            "keywordContainsIgnoreCase": ["OSHKOSH"]
+
+        },
+        {
+          
+            "name": "School",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Toys",
+            "keywordContainsIgnoreCase": []
+
+        }
+      ]
+    },
+    {
+      "name": "Utilities",
+      "subCategories": [
+        {
+          
+            "name": "Phone",
+            "keywordContainsIgnoreCase": ["fido","chatr"]
+
+        },
+        {
+          
+            "name": "TV",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Internet",
+            "keywordContainsIgnoreCase": ["fido home"]
+
+        },
+        {
+          
+            "name": "Electricity",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Heat/gas",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Water",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Trash",
+            "keywordContainsIgnoreCase": []
+
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "subCategories": [
+         {
+          
+            "name": "Other",
+            "keywordContainsIgnoreCase": ["AIR CAN"]
+
+        },{
+          
+            "name": "Fuel",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Car payments",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Repairs",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Registration/license",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Supplies",
+            "keywordContainsIgnoreCase": []
+
+        },
+        {
+          
+            "name": "Public transit",
+            "keywordContainsIgnoreCase": ["UBER","lyft","presto","VRTUCAR"]
+
+        }
+        
+        
+      ]
+    }
+  ]
+}
