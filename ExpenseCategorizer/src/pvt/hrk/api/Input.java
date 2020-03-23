@@ -1,4 +1,4 @@
-package pt.hrk.api;
+package pvt.hrk.api;
 
 import java.io.File;
 import java.io.FileReader;
@@ -14,11 +14,11 @@ import javax.money.MonetaryAmount;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
-import pt.hrk.model.Category;
-import pt.hrk.model.Metadata;
-import pt.hrk.model.Statement;
-import pt.hrk.model.SubCategory;
-import pt.hrk.model.Transaction;
+import pvt.hrk.model.Category;
+import pvt.hrk.model.Metadata;
+import pvt.hrk.model.Statement;
+import pvt.hrk.model.SubCategory;
+import pvt.hrk.model.Transaction;
 
 public class Input {
 
@@ -47,12 +47,12 @@ public class Input {
 			throws IOException, NumberFormatException, ParseException {
 		Statement statement = new Statement();
 		Reader in = new FileReader(file);
-		Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(in);
+		Iterable<CSVRecord> records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
 		for (CSVRecord record : records) {
 
-			String postedDateS = record.get("Posted Date");
-			String PayeeS = record.get("Payee");
-			String AmountS = record.get("Amount");
+			String postedDateS = record.get(0);
+			String PayeeS = record.get(1);
+			String AmountS = record.get(3);
 			Date postedDate = Utils.sdf.parse(postedDateS.trim());
 			MonetaryAmount cad = Utils.StringToMoneratyAmt(AmountS);
 			Transaction txn = new Transaction(postedDate, PayeeS.trim(), cad);

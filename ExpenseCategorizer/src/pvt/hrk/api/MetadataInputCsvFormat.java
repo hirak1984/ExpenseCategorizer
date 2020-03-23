@@ -1,4 +1,4 @@
-package pt.hrk.api;
+package pvt.hrk.api;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,8 +10,8 @@ import java.util.List;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
-import pt.hrk.model.Metadata;
-import pt.hrk.model.SubCategory;
+import pvt.hrk.model.Metadata;
+import pvt.hrk.model.SubCategory;
 
 public class MetadataInputCsvFormat {
 

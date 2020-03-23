@@ -1,4 +1,4 @@
-package pt.hrk.api;
+package pvt.hrk.api;
 
 import java.text.SimpleDateFormat;
 
@@ -20,6 +20,7 @@ public class Utils {
 		if(absoluteOnly) {
 			amt =  amt.abs();
 		}
-		return String.valueOf(amt.getNumber().doubleValue());
+		String retVal = String.valueOf(amt.getNumber().doubleValue());
+		return retVal;
 	}
 }

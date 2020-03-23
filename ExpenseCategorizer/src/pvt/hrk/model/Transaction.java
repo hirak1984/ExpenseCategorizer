@@ -1,4 +1,4 @@
-package pt.hrk.model;
+package pvt.hrk.model;
 
 import java.util.Date;
 

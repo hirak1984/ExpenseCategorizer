@@ -1,15 +1,15 @@
-package pt.hrk.main;
+package pvt.hrk.main;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-import pt.hrk.api.Input;
-import pt.hrk.api.MetadataInputCsvFormat;
-import pt.hrk.api.Output;
-import pt.hrk.model.Metadata;
-import pt.hrk.model.Statement;
+import pvt.hrk.api.Input;
+import pvt.hrk.api.MetadataInputCsvFormat;
+import pvt.hrk.api.Output;
+import pvt.hrk.model.Metadata;
+import pvt.hrk.model.Statement;
 
 public class MyMain {
 

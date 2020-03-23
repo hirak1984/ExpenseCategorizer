@@ -1,4 +1,4 @@
-package pt.hrk.api;
+package pvt.hrk.api;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,10 +14,10 @@ import java.util.TreeMap;
 
 import javax.money.MonetaryAmount;
 
-import pt.hrk.model.Metadata;
-import pt.hrk.model.Pair;
-import pt.hrk.model.Statement;
-import pt.hrk.model.Transaction;
+import pvt.hrk.model.Metadata;
+import pvt.hrk.model.Pair;
+import pvt.hrk.model.Statement;
+import pvt.hrk.model.Transaction;
 
 /**
  * After the output files are written, check the transactions file to find which rows are still unclassified.
@@ -34,15 +34,15 @@ public class Output {
 	private static String transactionsOutput = "Transactions.csv";
 	private static String transactionsHeaders = "PostedDate,Payee,Amount,Category,SubCategory" + System.lineSeparator();
 
-	public static Map<Pair, MonetaryAmount> printTransactionsAndReturnClassifiedsAggregated(File destinationDirectory,
+	public static Map<Pair<String,String>, MonetaryAmount> printTransactionsAndReturnClassifiedsAggregated(File destinationDirectory,
 			List<Statement> statements) throws FileNotFoundException, IOException {
-		Map<Pair, MonetaryAmount> outputMap = new HashMap<Pair, MonetaryAmount>();
+		Map<Pair<String,String>, MonetaryAmount> outputMap = new HashMap<Pair<String,String>, MonetaryAmount>();
 		List<Transaction> flattenedTransactions = new LinkedList<>();
 		for (Statement statement : statements) {
 			List<Transaction> transactions = statement.getTransactions();
 			for (Transaction txn : transactions) {
 				flattenedTransactions.add(txn);
-				Pair pair = new Pair(txn.getCategory(), txn.getSubCategory());
+				Pair<String,String> pair = new Pair<String,String>(txn.getCategory(), txn.getSubCategory());
 
 				MonetaryAmount amount = txn.getAmount();
 				if (outputMap.containsKey(pair)) {
@@ -59,18 +59,18 @@ public class Output {
 
 	public static void processResults(File destinationDirectory, Metadata metadata, List<Statement> statements)
 			throws FileNotFoundException, IOException {
-		Map<Pair, MonetaryAmount> outputMap = new TreeMap<Pair, MonetaryAmount>((p1, p2) -> {
-			int c = p1.getCategory().compareTo(p2.getCategory());
+		Map<Pair<String,String>, MonetaryAmount> outputMap = new TreeMap<Pair<String,String>, MonetaryAmount>((p1, p2) -> {
+			int c = p1.getA().compareTo(p2.getA());
 			if (c == 0) {
-				c = p1.getSubCategory().compareTo(p2.getSubCategory());
+				c = p1.getB().compareTo(p2.getB());
 			}
 			return c;
 		});
-		Map<Pair, MonetaryAmount> classifiedsFoundMap = printTransactionsAndReturnClassifiedsAggregated(
+		Map<Pair<String,String>, MonetaryAmount> classifiedsFoundMap = printTransactionsAndReturnClassifiedsAggregated(
 				destinationDirectory, statements);
 		metadata.categories.forEach(category -> {
 			category.subCategories.forEach(subCategory -> {
-				Pair pair = new Pair(category.name, subCategory.name);
+				Pair<String,String> pair = new Pair<String,String>(category.name, subCategory.name);
 				MonetaryAmount amt = classifiedsFoundMap.get(pair);
 				if (amt == null) {
 					amt =Utils.StringToMoneratyAmt("0.0");
@@ -96,13 +96,13 @@ public class Output {
 
 	}
 
-	private static void outputAggregatedResultsTo(Map<Pair, MonetaryAmount> outputMap, OutputStream os) throws IOException {
+	private static void outputAggregatedResultsTo(Map<Pair<String,String>, MonetaryAmount> outputMap, OutputStream os) throws IOException {
 		os.write(aggregatedOHeaders.getBytes());
-		Iterator<Pair> it = outputMap.keySet().iterator();
+		Iterator<Pair<String,String>> it = outputMap.keySet().iterator();
 		while (it.hasNext()) {
-			Pair key = it.next();
+			Pair<String,String> key = it.next();
 			StringBuilder sb = new StringBuilder();
-			sb.append(key.getCategory()).append(",").append(key.getSubCategory()).append(",").append(Utils.MoneratyAmtToString(outputMap.get(key),true))
+			sb.append(key.getA()).append(",").append(key.getB()).append(",").append(Utils.MoneratyAmtToString(outputMap.get(key),true))
 					.append(System.lineSeparator());
 
 			os.write(sb.toString().getBytes());
