@@ -11,5 +11,5 @@ Category,SubCategory, keywordContainsIgnoreCase....
 
 So all values starting column 3 will be considered as keyword.
 There are some markups possible for keywords - 
-* plain text -> will be checked against the transaction description.
-* $(amt) -> will be checked against the transaction amount (abs). Use this is you know what a recurring item costs no matter where you buy from.
+* plain text (e,g, enfamil) -> will be checked against the transaction description.
+* $amt (e.g. $39.17) -> will be checked against the transaction amount (abs). Use this if you know what a recurring item costs no matter where you buy from.
