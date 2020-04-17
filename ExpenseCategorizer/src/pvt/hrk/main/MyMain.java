@@ -13,11 +13,11 @@ import pvt.hrk.model.Statement;
 
 public class MyMain {
 
-	private static final String directoryPath = "C:\\Users\\hchatterjee\\Downloads\\creditcard\\";
+	private static final String directoryPath = "C:\\Users\\hchatterjee\\Downloads\\april";
 	private static final File directory = new File(directoryPath);
 
-	private static final File[] statementFiles = { new File(directoryPath, "March2020_1.csv"),
-			new File(directoryPath, "March2020_1.CSV"), new File(directoryPath, "March2020_2.csv") };
+	private static final File[] statementFiles = { new File(directoryPath, "April2020_9145.csv"),
+			new File(directoryPath, "April2020_3696.csv")};
 
 	public static void main(String[] args) throws IOException, NumberFormatException, ParseException {
 		// step 1
